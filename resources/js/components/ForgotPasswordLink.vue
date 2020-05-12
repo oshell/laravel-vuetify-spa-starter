@@ -38,12 +38,8 @@
 
 <script>
 import api from "../api";
-import LoadingOverlay from "./LoadingOverlay";
 
 export default {
-  components: {
-    LoadingOverlay
-  },
   data() {
     return {
       email: "",

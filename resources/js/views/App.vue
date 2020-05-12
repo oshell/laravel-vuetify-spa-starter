@@ -10,15 +10,9 @@
   </div>
 </template>
 <script>
-import AppBar from "../components/AppBar";
 import auth from "../auth";
-import LoadingOverlay from "../components/LoadingOverlay";
 
 export default {
-  components: {
-    AppBar,
-    LoadingOverlay
-  },
   data() {
     return {
       loading: false

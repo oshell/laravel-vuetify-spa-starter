@@ -146,26 +146,26 @@ class AuthController extends Controller
     protected function sendPasswordResetMail($user, $hash)
     {
       Mail::to($user)->send(new CtaMail([
-        'subject' => 'Passwort vergessen?',
-        'title' => 'Passwort vergessen?',
-        'preview' => 'Neues Passwort vergeben',
-        'paragraph' => 'Bitte klicke auf folgende Schaltfläche, um dein Passwort neu zu vergeben.',
+        'subject' => 'Forgot Password?',
+        'title' => 'Forgot Password?',
+        'preview' => 'Reset Password.',
+        'paragraph' => 'Click on the Button to reset your password.',
         'ctaLink' => url("/password/reset/{$user->id}/{$hash}"),
-        'ctaText' => 'Neues Passwort vergeben',
-        'info' => 'Solltest du diese Email nicht beantragt haben, kannst du sie einfach ignorieren.'
+        'ctaText' => 'Reset Password',
+        'info' => 'If you did not request this password simply ignore this email.'
       ]));
     }
 
     protected function sendEmailVerificationMail($user, $hash)
     {
       Mail::to($user)->send(new CtaMail([
-        'subject' => 'Email Verifizierung',
-        'title' => 'Email Verifizierung',
-        'preview' => 'Email Verifizierung',
-        'paragraph' => 'Bitte bestätige deine Email mit einem Klick auf die folgende Schaltfläche.',
+        'subject' => 'Email Verification',
+        'title' => 'Email Verification',
+        'preview' => 'Email Verification',
+        'paragraph' => 'Click on the Button to verify your Email.',
         'ctaLink' => url("/verify/email/{$user->id}/{$hash}"),
-        'ctaText' => 'Email Verifizieren',
-        'info' => 'Solltest du keinen Account erstellt haben, kannst du diese Email ignorieren.'
+        'ctaText' => 'Verify Email',
+        'info' => 'If you did not create an account, you can ignore this email.'
       ]));
     }
 }

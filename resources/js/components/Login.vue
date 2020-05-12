@@ -29,11 +29,8 @@
 <script>
 import auth from "../auth";
 import router from "../router";
-import ForgotPasswordLink from "./ForgotPasswordLink";
-import LoadingOverlay from "./LoadingOverlay";
 
 export default {
-  components: { ForgotPasswordLink },
   data: function() {
     return {
       email: "",
@@ -50,9 +47,9 @@ export default {
   methods: {
     login() {
       const valid = this.$refs.loginForm.validate();
-      this.loading = true;
 
       if (valid) {
+        this.loading = true;
         auth
           .login(this.email, this.password)
           .then(response => {

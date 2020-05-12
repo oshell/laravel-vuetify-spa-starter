@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import api from '../api';
+import auth from '../auth';
 
 export default {
   data() {
@@ -16,9 +16,7 @@ export default {
     }
   },
   created() {
-    api.user.get().then(response => {
-      this.user = response.data;
-    })
+    this.user = auth.user()
   }
 }
 </script>

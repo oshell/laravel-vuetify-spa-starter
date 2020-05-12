@@ -34,12 +34,8 @@
 <script>
 import auth from "../auth";
 import router from "../router";
-import LoadingOverlay from "./LoadingOverlay";
 
 export default {
-  components: {
-    LoadingOverlay
-  },
   data: function() {
     return {
       name: "",
