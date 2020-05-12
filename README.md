@@ -1,5 +1,7 @@
 # laravel-vuetify-spa-starter
 
+![Preview](https://i.imgur.com/Ecyf5aT.gif)
+
 Modern SPA starter template for rapid prototyping with the following features:
 - JSON API
 - JWT Authentication
